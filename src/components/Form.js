@@ -3,6 +3,7 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 const MyForm = (props) => {
   return (
+    <div className="container form-container">
     <Form>
       <FormGroup>
         <Label for="exampleEmail">Email</Label>
@@ -73,6 +74,7 @@ const MyForm = (props) => {
       </FormGroup>
       <Button>Submit</Button>
     </Form>
+    </div>
   );
 }
 
