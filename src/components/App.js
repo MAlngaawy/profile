@@ -1,49 +1,55 @@
-import React from 'react';
-import '../App.css';
+import React from "react";
+import '../css/App.css';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  useLocation
 } from "react-router-dom";
+import About from './About'
+import Connect from './Connect'
+import Projects from './Projects'
+import avatar from '../assets/avatar.jpg'
 
-import { NavItem, Nav, NavLink } from 'reactstrap';
-// importing Components
-import Home  from "./Home.js";
-import Form  from "./Form.js";
-import About  from "./About.js";
 
-function App() {
+const SideBar = () =>{
+  let { pathname } = useLocation();
+
+  return (
+    <div className="sidebar">
+      <div className='avatar'>
+        <img src={avatar} />
+      </div>
+      <ul>
+        <li> <Link to="/" className={pathname === '/' ? 'active' : ''}> About </Link> </li>
+        <li> <Link to="/projects" className={pathname === '/projects' ? 'active' : ''}> Projects </Link> </li>
+        <li> <Link to="/connect" className={pathname === '/connect' ? 'active' : ''}> connect me </Link> </li>
+      </ul>
+    </div>
+  )
+}
+
+
+
+export default function App() {
   return (
     <Router>
-      <div className="nav-div">
-        <Nav>
-          <NavItem>
-            <Link to="/"> Home </Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/about"> About </Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/form"> Form </Link>
-          </NavItem>
-        </Nav>
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-            <Switch>
-              <Route path="/about">
-                <About />
-              </Route>
-              <Route path="/form">
-                <Form />
-              </Route>
-              <Route path="/">
-                <Home />
-              </Route>
-            </Switch>
+      <div className='App'>
+        <SideBar />
+
+        <Switch>
+          <Route exact path="/">
+            <About />
+          </Route>
+          <Route path="/projects">
+            <Projects />
+          </Route>
+          <Route path="/connect">
+            <Connect />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );
 }
-
-export default App;
