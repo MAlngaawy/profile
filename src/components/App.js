@@ -12,7 +12,6 @@ import Connect from './Connect'
 import Projects from './Projects'
 import avatar from '../assets/avatar.jpg'
 
-
 const SideBar = () =>{
   let { pathname } = useLocation();
 
