@@ -1,5 +1,7 @@
 body {
   background-color: #fefefe;
+  margin: 0;
+  padding: 0;
 }
 
 a:hover {
@@ -35,7 +37,7 @@ a:hover {
 }
 .App .sidebar ul li a {
   display: block;
-  padding: 10px 0;
+  padding: 10px 5px;
   color: #a8a9b4;
 }
 .App .sidebar ul li a:hover {
@@ -152,6 +154,79 @@ a:hover {
 }
 .projects .todo-com .in-side .single-note.done .user-image, .projects .todo-com .in-side .single-note.done .note-content {
   opacity: 0.2;
+}
+
+@media (max-width: 768px) {
+  .App {
+    display: block;
+  }
+  .App .sidebar {
+    width: 100%;
+    height: 100px;
+    display: inline-table;
+  }
+  .App .sidebar .avatar {
+    display: none;
+  }
+  .App .sidebar ul li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  .App .sidebar ul li a {
+    border-radius: 2px;
+  }
+  .App .right-side {
+    width: 100%;
+    display: block;
+    padding: 10px;
+  }
+
+  .projects .projects-navbar ul {
+    margin: 0;
+    padding: 10px;
+  }
+  .projects .projects-navbar ul li {
+    margin: 5px;
+  }
+  .projects .todo-com .out-side {
+    margin: 10px;
+  }
+  .projects .todo-com .out-side form {
+    position: relative;
+  }
+  .projects .todo-com .out-side form input {
+    display: block;
+    margin: 5px;
+  }
+  .projects .todo-com .out-side form .add-note {
+    position: absolute;
+    top: 25%;
+    right: 20px;
+  }
+  .projects .todo-com .in-side {
+    padding: 5px;
+  }
+  .projects .todo-com .in-side .single-note {
+    padding: 5px;
+    position: relative;
+  }
+  .projects .todo-com .in-side .single-note .user-image {
+    display: none;
+  }
+  .projects .todo-com .in-side .single-note .note-content .username {
+    font-size: 18px;
+  }
+  .projects .todo-com .in-side .single-note .note-content .the-note {
+    font-size: 16px;
+  }
+  .projects .todo-com .in-side .single-note .command {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+  }
+  .projects .todo-com .in-side .single-note .command .delete .icon {
+    font-size: 20px;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

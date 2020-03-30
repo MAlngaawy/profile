@@ -1,11 +1,13 @@
 body {
   background-color: #fefefe;
+  margin: 0;
+  padding: 0;
 }
 
 // Main Styles
 a:hover {
   text-decoration: none !important;
-}
+} 
 
 .App {
   display: flex;
@@ -33,7 +35,7 @@ a:hover {
       margin-top: 30px;
       li a {
         display: block;
-        padding: 10px 0;
+        padding: 10px 5px;
         color: #a8a9b4;
         &:hover {
           margin: 0 5px;
@@ -175,4 +177,104 @@ a:hover {
       }
     }
   }
+}
+
+
+
+
+
+// Start Style For The Phone
+
+@media (max-width: 768px) {
+  .App {
+    display: block;
+    .sidebar {
+      width: 100%;
+      height: 100px;
+      display: inline-table;
+      .avatar {
+        display: none;
+      }
+      ul {
+        li {
+          display: inline-block;
+          margin: 0 10px;
+          a {
+            border-radius: 2px;
+          }
+        }
+      }
+    }
+    .right-side {
+      width: 100%;
+      display: block;
+      padding: 10px;
+    }
+  }
+
+  // Start Projects in phone size
+  .projects {
+    .projects-navbar {
+      ul {
+        margin: 0;
+        padding: 10px;
+        li {
+          margin: 5px;
+        }
+      }
+    }
+
+    .todo-com {
+      .out-side {
+        margin: 10px;
+        form {
+          position: relative;
+          input {
+            display: block;
+            margin: 5px;
+          }
+          .add-note {
+            position: absolute;
+            top: 25%;
+            right: 20px;
+          }
+        }
+      }
+
+      .in-side {
+        padding: 5px;
+        .single-note {
+          padding: 5px;
+          position: relative;
+          .user-image {
+            display: none;
+          }
+          .note-content {
+            .username {
+              font-size: 18px;
+            }
+            .the-note {
+              font-size: 16px;
+            }
+          }
+          .command {
+            position: absolute;
+            top: 0px;
+            right: 5px;
+            .delete {
+              .icon {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+
 }

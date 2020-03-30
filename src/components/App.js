@@ -30,8 +30,6 @@ const SideBar = () =>{
   )
 }
 
-
-
 export default function App() {
   return (
     <Router>

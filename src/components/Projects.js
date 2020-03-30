@@ -10,6 +10,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faTrashAlt, faCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import data from '../api.json';
+import { Alert } from 'reactstrap';
 
 
 // ToDo Component
@@ -22,7 +23,8 @@ function ToDo() {
     note: "",
     done: false,
     delete: false,
-  })
+  });
+  const [hide, setHide] = useState('d-none');
 
   const handleChange = (event) => {
     const val = event.target.value;
@@ -38,6 +40,13 @@ function ToDo() {
     if(newNote.username !== '' && newNote.note !== '') {
       setData([...myData, newNote])
       setNewNote({ ...newNote, username:'', note: ''})
+    } else {
+      setTimeout(() => {
+        setHide('');
+      }, 100)
+      setTimeout(() => {
+        setHide('d-none');
+      }, 2000)
     }
   }
 
@@ -52,6 +61,9 @@ function ToDo() {
   return (
     <div className='todo-com'>
       <div className='out-side'>
+        <Alert color="danger" className={hide}>
+          You Can't add an empty note, Bitch!!!
+        </Alert>
         <form>
           <input
             className='name-field'
@@ -118,11 +130,6 @@ function ToDo() {
     </div>
   )
 }
-
-
-
-
-
 
 
 function Other() {
