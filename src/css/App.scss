@@ -1,13 +1,29 @@
+// Font
+
+@font-face {
+  font-family: 'inriaSans';
+  src: url(../assets/InriaSans-Regular.ttf);
+  font-style: normal;
+  font-weight: 300;
+}
+
+$font: 'inriaSans';
+
 body {
-  background-color: #fefefe;
+  background-color: #f5f5f5;
   margin: 0;
   padding: 0;
+  font-family: $font !important;
 }
 
 // Main Styles
 a:hover {
   text-decoration: none !important;
 } 
+
+ul {
+  list-style: none;
+}
 
 .App {
   display: flex;
@@ -50,16 +66,31 @@ a:hover {
     }
   }
   .right-side {
-  width: 80%;
-  padding: 0 50px
+    width: 80%;
+    padding: 50px;
+  h1 {
+    margin: 20px auto;
+    font-weight: bold;
+  }
   }
 
   // Structior About Section
   .about {
-    margin: 50px auto;
-    p {
-      span {
-        font: 50px bold;
+    .intro-text {
+      text-align: center;
+      width: 75%;
+      margin: 30px auto;
+      font-size: 30px;
+    }
+    h5 {
+      font-size: 25px;
+    }
+    ul {
+      li {
+        display: inline-block;
+        margin: 5px;
+        font-size: 20px;
+        font-weight: normal;
       }
     }
   }
@@ -179,6 +210,26 @@ a:hover {
   }
 }
 
+// Start Connect Styling
+.connect {
+  >h1 {
+    margin: 50px auto;
+  }
+  .social {
+    ul {
+      margin: 20px auto;
+      li {
+        margin: 10px auto;
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+    h4 {
+      margin: 20px auto;
+    }
+  }
+}
+
 
 
 
@@ -209,6 +260,14 @@ a:hover {
       width: 100%;
       display: block;
       padding: 10px;
+    }
+  }
+
+  .about{
+    .intro-text {
+      width: 100% !important;
+      font-size: 25px !important;
+      text-align: left !important;
     }
   }
 
@@ -271,10 +330,6 @@ a:hover {
       }
     }
   }
-
-
-
-
 
 
 }

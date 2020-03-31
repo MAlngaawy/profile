@@ -14,7 +14,6 @@ import avatar from '../assets/avatar.jpg'
 
 const SideBar = () =>{
   let { pathname } = useLocation();
-  console.log(pathname)
   return (
     <div className="sidebar">
       <div className='avatar'>
@@ -34,7 +33,6 @@ export default function App() {
     <Router>
       <div className='App'>
         <SideBar />
-
         <Switch>
           <Route exact path="/profile" component={About} />
           <Route path="/projects" component={Projects} />
