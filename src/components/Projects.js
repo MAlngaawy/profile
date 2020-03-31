@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
+  NavLink,
   useLocation,
   useRouteMatch
 } from "react-router-dom";
@@ -149,10 +149,10 @@ export default function Projects() {
       <div className='projects-navbar'>
         <ul>
           <li>
-            <Link to={`${match.url}/todo-app`} className={pathname === '/projects/todo-app'? 'active': ''} >ToDO App</Link>
+            <NavLink to={`${match.url}/todo-app`} activeClassName='active' >ToDO App</NavLink>
           </li>
           <li>
-            <Link to={`${match.url}/other`} className={pathname === '/projects/other'? 'active': ''} >Other App</Link>
+            <NavLink to={`${match.url}/other`} activeClassName='active' >Other App</NavLink>
           </li>
         </ul>
       </div>

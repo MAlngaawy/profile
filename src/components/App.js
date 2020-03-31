@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
+  NavLink,
   useLocation
 } from "react-router-dom";
 import About from './About'
@@ -14,16 +14,16 @@ import avatar from '../assets/avatar.jpg'
 
 const SideBar = () =>{
   let { pathname } = useLocation();
-
+  console.log(pathname)
   return (
     <div className="sidebar">
       <div className='avatar'>
         <img src={avatar} />
       </div>
       <ul>
-        <li> <Link to="/" className={pathname === '/' ? 'active' : ''}> About </Link> </li>
-        <li> <Link to="/projects" className={pathname === '/projects' ? 'active' : ''}> Projects </Link> </li>
-        <li> <Link to="/connect" className={pathname === '/connect' ? 'active' : ''}> connect me </Link> </li>
+        <li> <NavLink exact to="/" activeClassName='active' > About </NavLink> </li>
+        <li> <NavLink to="/projects" activeClassName='active' > Projects </NavLink> </li>
+        <li> <NavLink to="/connect" activeClassName='active' > connect me </NavLink> </li>
       </ul>
     </div>
   )
@@ -36,15 +36,9 @@ export default function App() {
         <SideBar />
 
         <Switch>
-          <Route exact path="/">
-            <About />
-          </Route>
-          <Route path="/projects">
-            <Projects />
-          </Route>
-          <Route path="/connect">
-            <Connect />
-          </Route>
+          <Route exact path="/" component={About} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/connect" component={Connect} />
         </Switch>
       </div>
     </Router>
