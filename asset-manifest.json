@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/profile/static/css/main.05ba6bfd.chunk.css",
-    "main.js": "/profile/static/js/main.cd0b1464.chunk.js",
-    "main.js.map": "/profile/static/js/main.cd0b1464.chunk.js.map",
-    "runtime-main.js": "/profile/static/js/runtime-main.bf9a5bd9.js",
-    "runtime-main.js.map": "/profile/static/js/runtime-main.bf9a5bd9.js.map",
+    "main.css": "/profile/static/css/main.47b8486e.chunk.css",
+    "main.js": "/profile/static/js/main.2dd0a5f8.chunk.js",
+    "main.js.map": "/profile/static/js/main.2dd0a5f8.chunk.js.map",
+    "runtime-main.js": "/profile/static/js/runtime-main.1155fe88.js",
+    "runtime-main.js.map": "/profile/static/js/runtime-main.1155fe88.js.map",
     "static/css/2.de424728.chunk.css": "/profile/static/css/2.de424728.chunk.css",
-    "static/js/2.90fa2058.chunk.js": "/profile/static/js/2.90fa2058.chunk.js",
-    "static/js/2.90fa2058.chunk.js.map": "/profile/static/js/2.90fa2058.chunk.js.map",
+    "static/js/2.816b3465.chunk.js": "/profile/static/js/2.816b3465.chunk.js",
+    "static/js/2.816b3465.chunk.js.map": "/profile/static/js/2.816b3465.chunk.js.map",
     "index.html": "/profile/index.html",
-    "precache-manifest.0889ab763569d6690acc05ee0d2129fb.js": "/profile/precache-manifest.0889ab763569d6690acc05ee0d2129fb.js",
+    "precache-manifest.f05db65a4686efdb31b44499f976810a.js": "/profile/precache-manifest.f05db65a4686efdb31b44499f976810a.js",
     "service-worker.js": "/profile/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/profile/static/css/2.de424728.chunk.css.map",
-    "static/css/main.05ba6bfd.chunk.css.map": "/profile/static/css/main.05ba6bfd.chunk.css.map",
-    "static/js/2.90fa2058.chunk.js.LICENSE.txt": "/profile/static/js/2.90fa2058.chunk.js.LICENSE.txt",
+    "static/css/main.47b8486e.chunk.css.map": "/profile/static/css/main.47b8486e.chunk.css.map",
+    "static/js/2.816b3465.chunk.js.LICENSE.txt": "/profile/static/js/2.816b3465.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/profile/static/media/InriaSans-Regular.54fb2ae7.ttf",
     "static/media/avatar.jpg": "/profile/static/media/avatar.d854840c.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.bf9a5bd9.js",
+    "static/js/runtime-main.1155fe88.js",
     "static/css/2.de424728.chunk.css",
-    "static/js/2.90fa2058.chunk.js",
-    "static/css/main.05ba6bfd.chunk.css",
-    "static/js/main.cd0b1464.chunk.js"
+    "static/js/2.816b3465.chunk.js",
+    "static/css/main.47b8486e.chunk.css",
+    "static/js/main.2dd0a5f8.chunk.js"
   ]
 }
