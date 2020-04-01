@@ -100,6 +100,12 @@ ul {
   border-radius: 5px;
   color: #ffffff;
 }
+.projects .main-projects {
+  margin: 20px auto;
+}
+.projects .main-projects ul li {
+  margin: 20px auto;
+}
 .projects .todo-com .out-side {
   margin: 20px 0;
   text-align: center;

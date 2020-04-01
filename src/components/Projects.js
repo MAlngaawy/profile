@@ -1,136 +1,49 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
   NavLink,
-  useLocation,
   useRouteMatch
 } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faTrashAlt, faCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-import data from '../api.json';
-import { Alert } from 'reactstrap';
+import ToDo from './projects/Todo-app';
 
 
-// ToDo Component
-function ToDo() {
-  let notes = data;
-  const [myData, setData] = useState(notes);
-  const [newNote, setNewNote] = useState({
-    id: "",
-    username: "",
-    note: "",
-    done: false,
-    delete: false,
-  });
-  const [hide, setHide] = useState('d-none');
-
-  const handleChange = (event) => {
-    const val = event.target.value;
-    setNewNote({
-      ...newNote,
-      id: myData.length + 1,
-      [event.target.name]: val, // create a dynamic key name in the object
-    })
+const mainProjectsData = [
+  {
+    name: "SkillShare",
+    url: "https://angry-lamport-b8be47.netlify.com/",
+  },
+  {
+    name: "Top Gym",
+    url:"https://quizzical-perlman-fe3bb8.netlify.com/",
+  },
+  {
+    name: "Photo Maker",
+    url: "https://elated-kalam-fa733b.netlify.com/",
+  },
+  {
+    name: "Rock Paper Scissors Game",
+    url: "https://malngaawy.github.io/simple-game/",
   }
+]
 
-  const  addNote = (e) => {
-    e.preventDefault();
-    if(newNote.username !== '' && newNote.note !== '') {
-      setData([...myData, newNote])
-      setNewNote({ ...newNote, username:'', note: ''})
-    } else {
-      setTimeout(() => {
-        setHide('');
-      }, 100)
-      setTimeout(() => {
-        setHide('d-none');
-      }, 2000)
-    }
-  }
-
-  const deleteNote = (note) => {
-    setData([...myData, myData[note.id - 1].delete = true])
-  }
-
-  const doneNote = (note) => {
-    setData([...myData, myData[note.id - 1].done = !myData[note.id - 1].done])
-  }
-
+function MainProjects() {
+  const projects = mainProjectsData;
   return (
-    <div className='todo-com'>
-      <div className='out-side'>
-        <Alert color="danger" className={hide}>
-          You Can't add an empty note, Bitch!!!
-        </Alert>
-        <form>
-          <input
-            className='name-field'
-            type='text'
-            value={newNote.username}
-            name='username'
-            placeholder='Write Your Name'
-            onChange={handleChange}  
-          />
-          <input
-            className='note-field'
-            type='text'
-            value={newNote.note}
-            name='note'
-            placeholder='The Note...'
-            onChange={handleChange}
-          />
-          <label htmlFor='submit' className='add-note' > <FontAwesomeIcon icon={faPlus} /> </label>
-          <input type="submit" id='submit' value='' className='add-note-btn' onClick={addNote} />
-        </form>
-      </div>
-      <div className='in-side'>
-
-      {/* For Not Done Notes */}
-      {myData.filter((note) => note.delete === false && note.done == false ).map((note) => 
-        <div className='single-note' key={note.id}>
-          <div className='user-image'>Ma</div>
-          <div className='note-content'>
-            <h4 className='username'>{note.username}</h4>
-            <p className='the-note'>{note.note}</p>
-          </div>
-          <div className='command'>
-            <div className='done'>
-              <FontAwesomeIcon className='icon' icon={faCircle} onClick={() => doneNote(note)} />
-            </div>
-            <div className='delete'>
-              <FontAwesomeIcon className='icon' icon={faTrashAlt} onClick={() => deleteNote(note)} />
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* For Done Notes */}
-      {myData.filter((note) => note.done == true && note.delete == false).map((note) => 
-        <div className='single-note done' key={note.id}>
-          <div className='user-image'>Ma</div>
-          <div className='note-content'>
-            <h4 className='username'>{note.username}</h4>
-            <p className='the-note'>{note.note}</p>
-          </div>
-          <div className='command'>
-            <div className='done'>
-               <FontAwesomeIcon className='icon' icon={faCheckCircle}onClick={() => doneNote(note)} />
-            </div>
-            <div className='delete'>
-              <FontAwesomeIcon className='icon' icon={faTrashAlt} onClick={() => deleteNote(note)} />
-            </div>
-          </div>
-        </div>
-      )}
-
-
-      </div>
+    <div className="main-projects">
+    <h3>Here is the main projects i have created .. if you need more you can check the simple projects above</h3>
+      <ul>
+        <li className="single-project">
+        {projects.map((project) => 
+          <li key={project.name}>
+            <h3><a href={project.url}> {project.name} </a></h3>
+          </li>
+          )}
+        </li>
+      </ul>
     </div>
   )
 }
-
 
 function Other() {
   return (
@@ -142,7 +55,6 @@ function Other() {
 
 export default function Projects() {
   let match = useRouteMatch();
-  let { pathname } = useLocation();
 
   return (
     <div className='projects right-side'>
@@ -160,7 +72,7 @@ export default function Projects() {
       <Switch>
         <Route path={`${match.path}/:todo-app`}> <ToDo /> </Route>
         <Route path={`${match.path}/:other`}> <Other /> </Route>
-        <Route path={`${match.path}`}> <h1>Please Add Any App</h1> </Route>
+        <Route path={`${match.path}`}> <MainProjects /> </Route>
       </Switch>
     </div>
   )

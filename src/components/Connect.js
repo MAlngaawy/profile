@@ -6,19 +6,19 @@ function Social() {
       <h3>You can find me on</h3>
       <ul>
         <li>
-          <a target='_blank' href='https://www.facebook.com/mohammed.Alngaawy'> Facebook </a>
+          <a target='_blank' rel="noopener noreferrer" href='https://www.facebook.com/mohammed.Alngaawy'> Facebook </a>
         </li>
         <li>
-          <a target='_blank' href='https://twitter.com/malngaawy'> Twitter </a>
+          <a target='_blank'  rel="noopener noreferrer" href='https://twitter.com/malngaawy'> Twitter </a>
         </li>
         <li>
-          <a target='_blank' href='https://www.instagram.com/moalngaawy/'>Instagram</a>
+          <a target='_blank' rel="noopener noreferrer"  href='https://www.instagram.com/moalngaawy/'>Instagram</a>
         </li>
         <li>
-          <a target='_blank' href='linkedin.com/in/mohammed-alngaawy-352659147'>Linked In</a>
+          <a target='_blank' rel="noopener noreferrer"  href='linkedin.com/in/mohammed-alngaawy-352659147'>Linked In</a>
         </li>
         <li>
-          <a target='_blank' href='https://github.com/MAlngaawy'>Github</a>
+          <a target='_blank' rel="noopener noreferrer"  href='https://github.com/MAlngaawy'>Github</a>
         </li>
       </ul>
       <h4>Or You Can message me  Direct by <b><a href="mailto:m.alngaawy@yahoo.com">Gmail</a></b> </h4>

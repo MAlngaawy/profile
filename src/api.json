@@ -2,21 +2,21 @@
   {
     "id" : 1,
     "username": "Mohammed Alngaawy",
-    "note": "Bey the vegtablies from suber market and bring it to the hpuse before 7:30 PM",
+    "note": "Bey the vegtablies from suber market and bring it to home before 7:30 PM",
     "done": false,
     "delete": false
   },
   {
     "id" : 2,
-    "username": "Mohammed Alngaawy",
-    "note": "Bey the veho yoi saas use before 7:30 PM",
+    "username": "mohammed",
+    "note": "Check The Yoytube video",
     "done": true,
     "delete": false
   },
   {
     "id" : 3,
-    "username": "Mohammed Abdo",
-    "note": "Bey theMore things to the hpuse before 7:30 PM",
+    "username": "Ahmed",
+    "note": "Call The Client",
     "done": false,
     "delete": false
   }
