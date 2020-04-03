@@ -5,7 +5,7 @@
   font-weight: 300;
 }
 body {
-  background-color: #f5f5f5;
+  background-color: #f5f5f5 !important;
   margin: 0;
   padding: 0;
   font-family: "inriaSans" !important;
@@ -182,8 +182,57 @@ ul {
 .projects .todo-com .in-side .single-note.done p {
   text-decoration: line-through;
 }
-.projects .todo-com .in-side .single-note.done .user-image, .projects .todo-com .in-side .single-note.done .note-content {
+.projects .todo-com .in-side .single-note.done .user-image,
+.projects .todo-com .in-side .single-note.done .note-content {
   opacity: 0.2;
+}
+.projects .posts {
+  width: 70%;
+  margin: 20px auto;
+  text-align: center;
+}
+.projects .posts .post {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+}
+.projects .posts .post .user-info {
+  display: flex;
+  flex-direction: row;
+}
+.projects .posts .post .user-info .avatar {
+  width: 50px;
+  height: 50%;
+  border-radius: 50%;
+}
+.projects .posts .post .user-info .username-div .username {
+  margin-bottom: 0;
+}
+.projects .posts .post .user-info .username-div .date {
+  color: #929090;
+}
+.projects .posts .post .post-content {
+  margin: 20px 0;
+}
+.projects .posts .post .post-content p {
+  text-align: left;
+}
+.projects .posts .post .likes {
+  padding: 10px;
+}
+.projects .posts .post .likes span {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.projects .posts .post .likes .likes-num {
+  float: right;
+}
+.projects .posts .post .likes .like-btn {
+  float: left;
+  cursor: pointer;
+}
+.projects .posts .post .likes .like-btn .liked {
+  color: #ff0000;
 }
 
 .connect > h1 {

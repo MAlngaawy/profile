@@ -1,5 +1,8 @@
 import React from 'react';
 import '../css/App.css';
+
+
+
 function Social() {
   return (
     <div className='social'>
@@ -25,6 +28,7 @@ function Social() {
     </div>
   )
 }
+
 
 export default function Connect() {
   return (
