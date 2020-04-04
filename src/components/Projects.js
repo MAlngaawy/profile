@@ -5,28 +5,30 @@ import {
   NavLink,
   useRouteMatch,
   useHistory,
-  useParams
+  useParams,
 } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import ToDo from "./projects/Todo-app";
 import Posts from "./projects/posts";
 
 const mainProjectsData = [
   {
     name: "SkillShare",
-    url: "https://angry-lamport-b8be47.netlify.com/"
+    url: "https://angry-lamport-b8be47.netlify.com/",
   },
   {
     name: "Top Gym",
-    url: "https://quizzical-perlman-fe3bb8.netlify.com/"
+    url: "https://quizzical-perlman-fe3bb8.netlify.com/",
   },
   {
     name: "Photo Maker",
-    url: "https://elated-kalam-fa733b.netlify.com/"
+    url: "https://elated-kalam-fa733b.netlify.com/",
   },
   {
     name: "Rock Paper Scissors Game",
-    url: "https://malngaawy.github.io/simple-game/"
-  }
+    url: "https://malngaawy.github.io/simple-game/",
+  },
 ];
 
 function MainProjects() {
@@ -38,7 +40,7 @@ function MainProjects() {
         check the simple projects above
       </h3>
       <ul>
-        {projects.map(project => (
+        {projects.map((project) => (
           <li className="single-project" key={project.name}>
             <h3>
               <a target="_blank" rel="noopener noreferrer" href={project.url}>
@@ -64,7 +66,12 @@ export default function Projects() {
       console.log(useParams.slug);
     }
 
-    return <h5 onClick={handleClick}>All Projects</h5>;
+    return (
+      <h5 onClick={handleClick} className="all-projects-btn">
+        <FontAwesomeIcon icon={faArrowLeft} className="arrow" />
+        All Projects
+      </h5>
+    );
   }
 
   return (

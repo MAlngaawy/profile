@@ -67,7 +67,7 @@ ul {
   }
   .right-side {
     width: 80%;
-    padding: 50px;
+    padding: 30px;
     h1 {
       margin: 20px auto;
       font-weight: bold;
@@ -99,15 +99,25 @@ ul {
 //_____________________ Let's style the (Project) Component_________________
 
 .projects {
+  .all-projects-btn {
+    color: rgb(0, 174, 255);
+    cursor: pointer;
+    .arrow {
+      margin: 0 15px;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   .projects-navbar {
     ul {
       list-style: none;
       border-bottom: 1px solid #215487;
-      margin: 20px 0;
       padding: 10px 0;
       li {
         display: inline-block;
-        margin: 5px 20px;
+        margin: 5px;
         .active {
           background-color: #3e4ce6;
           padding: 5px;
@@ -129,7 +139,6 @@ ul {
 
   .todo-com {
     .out-side {
-      margin: 20px 0;
       text-align: center;
       input {
         padding: 3px;
@@ -154,32 +163,35 @@ ul {
     }
 
     .in-side {
-      margin: 20px 0;
+      margin: 10px 0;
       border: 2px solid #215487;
       border-radius: 5px;
-      padding: 20px;
+      padding: 5px;
       .single-note {
         margin: 5px;
-        padding: 10px 0;
         border-bottom: 1px solid #2154874f;
         overflow: auto;
-        .user-image {
+        .done {
           display: inline-block;
           margin: 10px;
-          background-color: #247dcf;
-          font-size: 20px;
           vertical-align: top;
-          color: #fff;
-          border-radius: 50%;
-          padding: 5px;
+          .icon {
+            cursor: pointer;
+            color: #bbbbbb;
+            width: 20px;
+            height: 20px;
+          }
         }
         .note-content {
           display: inline-block;
           .username {
             font-size: 22px;
+            color: #337dc7;
+            margin-bottom: 0;
           }
           .the-note {
             font-size: 20px;
+            margin-bottom: 5px;
           }
         }
         .command {
@@ -188,19 +200,11 @@ ul {
             display: inline-block;
             margin: 0 5px;
           }
-          .done {
-            .icon {
-              cursor: pointer;
-              color: #bbbbbb;
-              width: 20px;
-              height: 20px;
-            }
-          }
           .delete {
             .icon {
               color: rgb(255, 0, 98);
               cursor: pointer;
-              font-size: 30px;
+              font-size: 20px;
             }
           }
         }
@@ -219,13 +223,13 @@ ul {
   }
 
   .posts {
-    width: 70%;
     margin: 20px auto;
     text-align: center;
     .post {
       background-color: #fff;
       padding: 20px;
-      margin: 10px;
+      margin: 10px 0;
+      max-width: 600px;
       .user-info {
         display: flex;
         flex-direction: row;
@@ -247,10 +251,16 @@ ul {
         margin: 20px 0;
         p {
           text-align: left;
+          span {
+            color: #4747ff;
+            cursor: pointer;
+            text-decoration: underline;
+          }
         }
       }
       .likes {
         padding: 10px;
+        border-top: 1px solid;
         span {
           display: inline-block;
           margin-bottom: 10px;
@@ -361,8 +371,11 @@ ul {
         .single-note {
           padding: 5px;
           position: relative;
-          .user-image {
-            display: none;
+          .done {
+            .icon {
+              width: 18px;
+              height: 18px;
+            }
           }
           .note-content {
             .username {
@@ -378,7 +391,7 @@ ul {
             right: 5px;
             .delete {
               .icon {
-                font-size: 20px;
+                font-size: 15px;
               }
             }
           }

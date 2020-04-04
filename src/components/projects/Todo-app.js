@@ -4,7 +4,7 @@ import {
   faPlus,
   faTrashAlt,
   faCircle,
-  faCheckCircle
+  faCheckCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import data from "../../notes.json";
 import { Alert } from "reactstrap";
@@ -18,20 +18,20 @@ export default function ToDo() {
     username: "",
     note: "",
     done: false,
-    delete: false
+    delete: false,
   });
   const [hide, setHide] = useState("d-none");
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     const val = event.target.value;
     setNewNote({
       ...newNote,
       id: myData.length + 1,
-      [event.target.name]: val // create a dynamic key name in the object
+      [event.target.name]: val, // create a dynamic key name in the object
     });
   };
 
-  const addNote = e => {
+  const addNote = (e) => {
     e.preventDefault();
     if (newNote.username !== "" && newNote.note !== "") {
       setData([...myData, newNote]);
@@ -46,14 +46,14 @@ export default function ToDo() {
     }
   };
 
-  const deleteNote = note => {
+  const deleteNote = (note) => {
     setData([...myData, (myData[note.id - 1].delete = true)]);
   };
 
-  const doneNote = note => {
+  const doneNote = (note) => {
     setData([
       ...myData,
-      (myData[note.id - 1].done = !myData[note.id - 1].done)
+      (myData[note.id - 1].done = !myData[note.id - 1].done),
     ]);
   };
 
@@ -96,10 +96,9 @@ export default function ToDo() {
       <div className="in-side">
         {/* For Not Done Notes */}
         {myData
-          .filter(note => note.delete === false && note.done === false)
-          .map(note => (
+          .filter((note) => note.delete === false && note.done === false)
+          .map((note) => (
             <div className="single-note" key={note.id}>
-              <div className="user-image">Ma</div>
               <div className="note-content">
                 <h4 className="username">{note.username}</h4>
                 <p className="the-note">{note.note}</p>
@@ -125,10 +124,9 @@ export default function ToDo() {
 
         {/* For Done Notes */}
         {myData
-          .filter(note => note.done === true && note.delete === false)
-          .map(note => (
+          .filter((note) => note.done === true && note.delete === false)
+          .map((note) => (
             <div className="single-note done" key={note.id}>
-              <div className="user-image">Ma</div>
               <div className="note-content">
                 <h4 className="username">{note.username}</h4>
                 <p className="the-note">{note.note}</p>

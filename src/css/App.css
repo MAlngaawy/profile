@@ -62,7 +62,7 @@ ul {
 }
 .App .right-side {
   width: 80%;
-  padding: 50px;
+  padding: 30px;
 }
 .App .right-side h1 {
   margin: 20px auto;
@@ -84,15 +84,24 @@ ul {
   font-weight: normal;
 }
 
+.projects .all-projects-btn {
+  color: #00aeff;
+  cursor: pointer;
+}
+.projects .all-projects-btn .arrow {
+  margin: 0 15px;
+}
+.projects .all-projects-btn:hover {
+  text-decoration: underline;
+}
 .projects .projects-navbar ul {
   list-style: none;
   border-bottom: 1px solid #215487;
-  margin: 20px 0;
   padding: 10px 0;
 }
 .projects .projects-navbar ul li {
   display: inline-block;
-  margin: 5px 20px;
+  margin: 5px;
 }
 .projects .projects-navbar ul li .active {
   background-color: #3e4ce6;
@@ -107,7 +116,6 @@ ul {
   margin: 20px auto;
 }
 .projects .todo-com .out-side {
-  margin: 20px 0;
   text-align: center;
 }
 .projects .todo-com .out-side input {
@@ -131,35 +139,38 @@ ul {
   display: none;
 }
 .projects .todo-com .in-side {
-  margin: 20px 0;
+  margin: 10px 0;
   border: 2px solid #215487;
   border-radius: 5px;
-  padding: 20px;
+  padding: 5px;
 }
 .projects .todo-com .in-side .single-note {
   margin: 5px;
-  padding: 10px 0;
   border-bottom: 1px solid #2154874f;
   overflow: auto;
 }
-.projects .todo-com .in-side .single-note .user-image {
+.projects .todo-com .in-side .single-note .done {
   display: inline-block;
   margin: 10px;
-  background-color: #247dcf;
-  font-size: 20px;
   vertical-align: top;
-  color: #fff;
-  border-radius: 50%;
-  padding: 5px;
+}
+.projects .todo-com .in-side .single-note .done .icon {
+  cursor: pointer;
+  color: #bbbbbb;
+  width: 20px;
+  height: 20px;
 }
 .projects .todo-com .in-side .single-note .note-content {
   display: inline-block;
 }
 .projects .todo-com .in-side .single-note .note-content .username {
   font-size: 22px;
+  color: #337dc7;
+  margin-bottom: 0;
 }
 .projects .todo-com .in-side .single-note .note-content .the-note {
   font-size: 20px;
+  margin-bottom: 5px;
 }
 .projects .todo-com .in-side .single-note .command {
   float: right;
@@ -168,16 +179,10 @@ ul {
   display: inline-block;
   margin: 0 5px;
 }
-.projects .todo-com .in-side .single-note .command .done .icon {
-  cursor: pointer;
-  color: #bbbbbb;
-  width: 20px;
-  height: 20px;
-}
 .projects .todo-com .in-side .single-note .command .delete .icon {
   color: #ff0062;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 20px;
 }
 .projects .todo-com .in-side .single-note.done p {
   text-decoration: line-through;
@@ -187,14 +192,14 @@ ul {
   opacity: 0.2;
 }
 .projects .posts {
-  width: 70%;
   margin: 20px auto;
   text-align: center;
 }
 .projects .posts .post {
   background-color: #fff;
   padding: 20px;
-  margin: 10px;
+  margin: 10px 0;
+  max-width: 600px;
 }
 .projects .posts .post .user-info {
   display: flex;
@@ -217,8 +222,14 @@ ul {
 .projects .posts .post .post-content p {
   text-align: left;
 }
+.projects .posts .post .post-content p span {
+  color: #4747ff;
+  cursor: pointer;
+  text-decoration: underline;
+}
 .projects .posts .post .likes {
   padding: 10px;
+  border-top: 1px solid;
 }
 .projects .posts .post .likes span {
   display: inline-block;
@@ -310,8 +321,9 @@ ul {
     padding: 5px;
     position: relative;
   }
-  .projects .todo-com .in-side .single-note .user-image {
-    display: none;
+  .projects .todo-com .in-side .single-note .done .icon {
+    width: 18px;
+    height: 18px;
   }
   .projects .todo-com .in-side .single-note .note-content .username {
     font-size: 18px;
@@ -325,7 +337,7 @@ ul {
     right: 5px;
   }
   .projects .todo-com .in-side .single-note .command .delete .icon {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 
