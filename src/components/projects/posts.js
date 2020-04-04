@@ -12,7 +12,6 @@ export default function Posts() {
 
   const addLike = (post) => {
     setObj([...obj, (obj[post.id - 1].like += 1)]);
-    console.log(post);
   };
 
   const txt = (post) => {
@@ -27,7 +26,6 @@ export default function Posts() {
 
   const showMore = (post) => {
     setObj([...obj, (obj[post.id - 1].all = !obj[post.id - 1].all)]);
-    console.log(post);
   };
 
   return (

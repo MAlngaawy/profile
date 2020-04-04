@@ -1,35 +1,48 @@
 import React from "react";
-import '../css/App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  NavLink,
-} from "react-router-dom";
-import About from './About'
-import Connect from './Connect'
-import Projects from './Projects'
-import avatar from '../assets/avatar.jpg'
+import "../css/App.css";
+import { HashRouter as Router, Switch, Route, NavLink } from "react-router-dom";
+import About from "./About";
+import Connect from "./Connect";
+import Projects from "./Projects";
+import avatar from "../assets/avatar.jpg";
 
-const SideBar = () =>{
+const SideBar = () => {
   return (
     <div className="sidebar">
-      <div className='avatar'>
-        <img src={avatar} alt='avatar' />
+      <div className="avatar">
+        <img src={avatar} alt="avatar" />
       </div>
       <ul>
-        <li> <NavLink exact to="/profile" activeClassName='active' > About </NavLink> </li>
-        <li> <NavLink to="/projects" activeClassName='active' > Projects </NavLink> </li>
-        <li> <NavLink to="/connect" activeClassName='active' > connect me </NavLink> </li>
+        <li>
+          {" "}
+          <NavLink exact to="/profile" activeClassName="active">
+            {" "}
+            About{" "}
+          </NavLink>{" "}
+        </li>
+        <li>
+          {" "}
+          <NavLink to="/projects" activeClassName="active">
+            {" "}
+            Projects{" "}
+          </NavLink>{" "}
+        </li>
+        <li>
+          {" "}
+          <NavLink to="/connect" activeClassName="active">
+            {" "}
+            connect me{" "}
+          </NavLink>{" "}
+        </li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
 export default function App() {
   return (
     <Router>
-      <div className='App'>
+      <div className="App">
         <SideBar />
         <Switch>
           <Route exact path="/profile" component={About} />
