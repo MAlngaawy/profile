@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import posts from "../../posts.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart as rHeart } from "@fortawesome/free-regular-svg-icons";
+import { faHeart as sHeart } from "@fortawesome/free-solid-svg-icons";
 
 for (let post of posts) {
   post.all = false;
+  post.ILiked = false;
 }
 
 export default function Posts() {
@@ -12,6 +14,12 @@ export default function Posts() {
 
   const addLike = (post) => {
     setObj([...obj, (obj[post.id - 1].like += 1)]);
+    setObj([...obj, (obj[post.id - 1].ILiked = !obj[post.id - 1].ILiked)]);
+  };
+
+  const removeLike = (post) => {
+    setObj([...obj, (obj[post.id - 1].like -= 1)]);
+    setObj([...obj, (obj[post.id - 1].ILiked = !obj[post.id - 1].ILiked)]);
   };
 
   const txt = (post) => {
@@ -57,10 +65,22 @@ export default function Posts() {
             )}
           </div>
           <div className="likes">
-            <span className="likes-num"> {post.like} Like </span>
-            <span className="like-btn" onClick={() => addLike(post)}>
-              <FontAwesomeIcon icon={faHeart} />
+            <span className="likes-num">
+              {" "}
+              {post.like}{" "}
+              <span>
+                <FontAwesomeIcon icon={sHeart} />
+              </span>
             </span>
+            {post.ILiked === false ? (
+              <span className="like-btn unliked" onClick={() => addLike(post)}>
+                <FontAwesomeIcon icon={rHeart} />
+              </span>
+            ) : (
+              <span className="like-btn liked" onClick={() => removeLike(post)}>
+                <FontAwesomeIcon icon={sHeart} />
+              </span>
+            )}
           </div>
         </div>
       ))}

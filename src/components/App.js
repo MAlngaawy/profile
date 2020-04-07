@@ -1,6 +1,11 @@
 import React from "react";
 import "../css/App.css";
-import { HashRouter as Router, Switch, Route, NavLink } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+} from "react-router-dom";
 import About from "./About";
 import Connect from "./Connect";
 import Projects from "./Projects";

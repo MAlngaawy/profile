@@ -93,11 +93,11 @@ export default function Projects() {
       </div>
 
       <Switch>
-        <Route path={`${match.path}/:todo-app`}>
+        <Route path={`${match.path}/todo-app`}>
           {" "}
           <ToDo />{" "}
         </Route>
-        <Route path={`${match.path}/:other`}>
+        <Route path={`${match.path}/posts`}>
           {" "}
           <Posts />{" "}
         </Route>

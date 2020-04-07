@@ -61,7 +61,7 @@ export default function ToDo() {
     <div className="todo-com">
       <div className="out-side">
         <Alert color="danger" className={hide}>
-          You Can't add an empty note, Bitch!!!
+          You Can't add an empty note !!!
         </Alert>
         <form>
           <input
